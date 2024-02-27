@@ -1,0 +1,64 @@
+@import "../../sass/_mixins";
+
+.loginPage {
+  background-image: url("../../../public/loginBackground.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: inherit;
+    filter: blur(0.75rem);
+    @include respond($breakpoint: "tab-land") {
+      width: 70%;
+    }
+    @include respond($breakpoint: "tab-port") {
+      width: 80%;
+    }
+    @include respond($breakpoint: "mobile") {
+      width: 100%;
+    }
+  }
+  .container {
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 49.6rem;
+    padding: 4rem;
+    flex-direction: column;
+    gap: 2.4rem;
+    border-radius: 2.4rem;
+    background: #423950;
+    box-shadow: 0rem 0.4rem 2.5rem 0rem rgba(0, 0, 0, 0.25);
+    @include respond($breakpoint: "tab-land") {
+      left: 5%;
+    }
+    @include respond($breakpoint: "tab-port") {
+      left: 5%;
+      width: 70%;
+    }
+    @include respond($breakpoint: "mobile") {
+      padding: 2rem;
+      left: 0%;
+      height: 100%;
+      width: 100%;
+    }
+    .logoContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}

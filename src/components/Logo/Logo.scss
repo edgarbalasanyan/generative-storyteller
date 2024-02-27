@@ -1,0 +1,18 @@
+@import "../../sass/variables";
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  .icon {
+    width: 5rem;
+    height: auto;
+  }
+  .iconText {
+    width: 100%;
+    max-width: 9rem;
+    padding: 0 0.5rem;
+  }
+}

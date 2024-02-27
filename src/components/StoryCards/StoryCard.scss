@@ -1,0 +1,11 @@
+@import "../../sass/mixins";
+
+.storyCard {
+  flex-shrink: 0;
+  border-radius: 1.6rem;
+  border: 1px solid #423950;
+  background-size: contain;
+  &:hover{
+    cursor: pointer;
+  }
+}

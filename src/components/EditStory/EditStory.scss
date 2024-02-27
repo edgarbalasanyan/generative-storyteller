@@ -1,0 +1,72 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/typography";
+
+.editContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .editAreas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .generatedContext {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    color: $color-white;
+    outline: none;
+    border: 1px solid $color-pink;
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+  }
+}
+.editStoryOverlay {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(125, 113, 131, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editStoryContent {
+  display: flex;
+  width: 80%;
+  max-width: 80rem;
+  height: fit-content;
+  padding: 4rem;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #423950;
+  box-shadow: 1px 1px 25px 0px rgba(227, 227, 227, 0.15);
+  @include respond($breakpoint: "tab-port-mini") {
+    width: 100%;
+    gap: 1rem;
+  }
+  @include respond($breakpoint: "tab-port-mini") {
+    width: 100%;
+    gap: 1rem;
+  }
+  @include respond($breakpoint: "tab-port-mini") {
+    padding-left: 1rem;
+  }
+  .editStoryForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+  }
+  .closeEditStory {
+    cursor: pointer;
+  }
+}

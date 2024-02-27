@@ -1,0 +1,85 @@
+@import "../../../../sass/variables";
+@import "../../../../sass/mixins";
+
+.profileContainer {
+  padding-left: 16rem;
+  background: $background-color-lighter;
+  box-shadow: 1px 1px 25px 0px rgba(227, 227, 227, 0.15);
+  width: 100%;
+  height: 27rem;
+  display: flex;
+  gap: 4rem;
+  .avatar {
+    align-self: center;
+    display: flex;
+    width: 18rem;
+    height: 18rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background: $background-color-lighter;
+    box-shadow: 1px 1px 25px 0px #e3e3e326;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+    @include respond($breakpoint: "tab-port") {
+      width: 13rem;
+      height: 13rem;
+    }
+    @include respond($breakpoint: "tab-port-mini") {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+  .nameContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 3rem;
+    span {
+      margin-top: 6rem;
+      @include respond($breakpoint: "tab-port") {
+        margin-top: 9rem;
+      }
+    }
+    h2 {
+      white-space: wrap;
+    }
+  }
+  .profileSettings {
+    margin: 0 2rem 2rem 0;
+    display: flex;
+    align-self: flex-end;
+    align-items: end;
+    justify-content: end;
+    &:hover {
+      cursor: pointer;
+    }
+    @include respond($breakpoint: "tab-port") {
+      padding: 0 1rem 1rem 0;
+    }
+  }
+  @include respond($breakpoint: "tab-land") {
+    gap: 2rem;
+    padding-left: 13rem;
+  }
+  @include respond($breakpoint: "tab-port") {
+    padding-left: 10rem;
+    gap: 1.2rem;
+    h2 {
+      font-size: 4rem;
+    }
+  }
+  @include respond($breakpoint: "tab-port-mini") {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+  @include respond($breakpoint: "mobile") {
+    padding-left: 0;
+    margin-top: 4rem;
+    h2 {
+      font-size: 4rem;
+    }
+   }
+}

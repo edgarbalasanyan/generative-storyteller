@@ -1,0 +1,14 @@
+@import "../../../sass/mixins";
+
+.midStoryCard {
+  width: 33rem;
+  height: 32rem;
+  @include respond($breakpoint: "tab-land") {
+    width: 22rem;
+    height: 21.4rem;
+  }
+  @include respond($breakpoint: "tab-port") {
+    width: 15rem;
+    height: 14.6rem;
+  }
+}

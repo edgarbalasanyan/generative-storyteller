@@ -1,0 +1,32 @@
+@import "../../../../sass/_variables";
+
+.signUpContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+  .signUpInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    h2 {
+      margin: 0;
+    }
+  }
+  .signUpButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: center;
+    p{
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color: $color-light-blue;
+    }
+  }
+  .offscreen{
+    display: none;
+  }
+}

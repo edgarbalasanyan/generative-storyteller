@@ -1,0 +1,50 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.modalOverlay {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(108, 110, 114, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalContent {
+  display: flex;
+  width: 80%;
+  max-width: 80rem;
+  height: fit-content;
+  padding: 4rem;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #423950;
+  box-shadow: 1px 1px 25px 0px rgba(227, 227, 227, 0.15);
+  @include respond($breakpoint: "tab-port-mini") {
+    width: 100%;
+    gap: 1rem;
+  }
+  @include respond($breakpoint: "tab-port-mini") {
+    width: 100%;
+    gap: 1rem;
+  }
+  @include respond($breakpoint: "tab-port-mini") {
+    padding-left: 1rem;
+  }
+
+  .modalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7.5rem;
+    flex: 1 0 0;
+  }
+  .closeModal {
+    cursor: pointer;
+  }
+}

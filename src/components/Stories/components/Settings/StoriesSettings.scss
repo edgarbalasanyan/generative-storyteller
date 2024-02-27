@@ -1,0 +1,37 @@
+@import "../../../../sass/variables";
+
+.storiesSettings {
+  position: relative;
+}
+.settingsDotsContainer {
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.storySettings {
+  z-index: 2;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  display: flex;
+  width: 16rem;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 8px;
+  background: $background-color-lighter;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  &:hover {
+    cursor: pointer;
+  }
+  li {
+    border-bottom: 1px solid #a3a3a3;
+    width: 100%;
+    padding: 1rem;
+    &:hover {
+      background-color: rgba(59, 42, 67, 0.97);
+    }
+  }
+}

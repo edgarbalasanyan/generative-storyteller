@@ -1,0 +1,32 @@
+@import "../../../../sass/mixins";
+
+.myAccountContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  .myAccountBody {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    padding-left: 16rem;
+    .collections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.4rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+@include respond($breakpoint: "mobile") {
+  .myAccountContainer {
+    .myAccountBody {
+      padding-left: 0;
+      .title2{
+        text-align: center;
+      }
+      .collections {
+        justify-content: center;
+      }
+    }
+  }
+}
